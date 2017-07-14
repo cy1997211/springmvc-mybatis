@@ -10,4 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findUserByName" parameterType="java.lang.String" resultType="user">
 		select * from user where name = #{name}
 	</select>
+	<select id="findUserByAdd" parameterType="java.lang.String" resultType="user">
+		select * from user where address like '%'||#{address}||'%'
+	</select>
 </mapper>
